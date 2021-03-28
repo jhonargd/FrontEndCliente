@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "http://Access-Control-Allow-Origin",
+            "request": "launch",
+            "url": "http://Access-Control-Allow-Origin"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+<div class="container custom-container">
+    <div class="col-md-12">
+      <h3 class="mb-3 text-center">Crear Cliente</h3>
+  
+      <div class="form-group">
+        <input type="number" [(ngModel)]="Cliente.nmCliente" class="form-control" placeholder="Cedula">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.nombre" class="form-control" placeholder="Nombre">
+      </div>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.apellido" class="form-control" placeholder="Apellido">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.direccion" class="form-control" placeholder="Direccion">
+      </div>
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="Cliente.telefono" class="form-control" placeholder="Telefono">
+      </div>
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="Cliente.telefonoAlterno" class="form-control" placeholder="Telefono Alterno">
+      </div>
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="Cliente.celular" class="form-control" placeholder="Celular">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.email" class="form-control" placeholder="Email">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.cargo" class="form-control" placeholder="Cargo">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.pais" class="form-control" placeholder="Pais">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.ciudad" class="form-control" placeholder="Ciudad">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.comunidad" class="form-control" placeholder="Comunidad">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.empresaLabora" class="form-control" placeholder="Empresa donde labora">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.division" class="form-control" placeholder="Division">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="Cliente.hobbie" class="form-control" placeholder="Hobbie">
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha Nacimiento</mat-label>
+            <input [(ngModel)]="Cliente.fechaNacimiento" matInput [matDatepicker]="dp3" disabled>
+            <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Genero</mat-label>
+            <mat-select [(ngModel)]="Cliente.genero">
+              <mat-option>None</mat-option>
+              <mat-option value="1">Masculino</mat-option>
+              <mat-option value="2">Femenino</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+      </div>
+      
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="addCliente(Cliente)">Crear Cliente</button>
+      </div>
+  
+    </div>
+  </div>
